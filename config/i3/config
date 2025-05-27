@@ -205,7 +205,7 @@ gaps outer 1
 # Installation sudo pacman -S brightnessctl
 
 bindsym XF86MonBrightnessUp exec brightnessctl s +5%
-bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
+bindsym XF86MonBrightnessDown exec brightnessctl s 2%-
 
 
 
@@ -215,4 +215,17 @@ bindsym $mod+Ctrl+l exec --no-startup-id i3lock -c 000000
 
 #feh for setting background
 exec feh --bg-scale ~/wallpapers/minecraft.png --no-fehbg
+
+#boomer https://github.com/tsoding/boomer
+#sudo nano /usr/local/bin/boomer-wrapper
+#sudo chmod +x /usr/local/bin/boomer-wrapper
+bindsym $mod+Shift+z exec /usr/local/bin/boomer-wrapper
+
+
+#picom config
+exec_always --no-startup-id picom &
+#exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+
+
+exec --no-startup-id setxkbmap -layout "fr,ara" -option "grp:alt_shift_toggle"
 
