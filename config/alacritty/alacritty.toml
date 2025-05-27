@@ -1,0 +1,16 @@
+
+
+# Example Alacritty Configuration in TOML format
+[font]
+size = 9
+
+
+[font.normal]
+family = "FiraMono"
+style = "Regular"
+
+[general]
+import = [
+    "~/.config/alacritty/themes/blood_moon.toml"
+]
+
